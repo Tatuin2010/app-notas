@@ -1,17 +1,3 @@
-# Servidor de Desarrollo Básico
+# Alicación de Notas Básico
 
-Servidor con todas las dependencias y configuraciones necesarias para empezar proyectos.
-
-## Caracteristicas
-##### Actualiza la ventana del navegador de manera automática.
-##### Importa estilos e imágenes de forma dinámica.
-##### Limpia la carpeta dist de manera automática.
-
-## Ejecuta el comando para instalar node_modules
-```
-npm install
-```
-## Ejecuta el comando para crear la carpeta dist
-```
-npm run build
-```
+Primera versión aún muy rudimentaria.
