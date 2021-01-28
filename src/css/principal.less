@@ -1,0 +1,57 @@
+body {
+    background-color: #1c1d1f;
+    color: #ddddde;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+}
+
+#panel-izq {
+    .caja(17%,calc(100vh - 20px),left,#27282a,hidden);
+    max-width: 220px;
+    padding: 10px;
+    display : inline-block;
+}
+
+#panel-der {
+    .caja(17%,calc(100vh - 20px),right,#27282a,hidden);
+    padding: 10px;
+    display : inline-block;
+}
+
+#panel-central {
+    .caja(60%,calc(100vh - 20px),left, #1c1d1f,hidden);
+}
+
+.ico {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: #959595;
+    cursor: pointer;
+}
+
+.ico-del {
+    float: right;
+    background-color: rgba(0,0,0,0);
+}
+
+.ico-add:hover {
+    background-color: #5571ca;
+}
+
+.ico-del:hover {
+    background-color: red;
+}
+
+.ico-add ~ span {
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+} 
+
