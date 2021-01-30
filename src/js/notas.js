@@ -1,28 +1,36 @@
-import '../css/notas.less';
+import '../css/carpetas-notas.less';
 import { Nota, Notas } from '../classes';
 
-const notas = new Notas();
+export const notas = new Notas();
+
+const inpNota = document.createElement('input');
+inpNota.setAttribute('id', 'addNota');
+inpNota.setAttribute('placeholder', 'Agregar Nota');
+export const addNota = inpNota;
 
 const notasId = document.querySelector('#notas'),
-    addNota = document.querySelector('#addNota');
+    // addNota = document.querySelector('#addNota'),
+    panelCentral = document.querySelector('#panel-central');
 
-const construirHtml = (nota) => {
+
+
+export const construirHtmlNota = (nota) => {
 
     const li = document.createElement('li');
     li.classList.add('nota');
     li.setAttribute('id', nota.id);
-    li.innerHTML = ` <input type="checkbox"> ${nota.nota}<img class="ico ico-del" src="./assets/ico-del.png"><hr>`;
+    li.innerHTML = ` <input type="checkbox"> ${nota.nota}<img class="ico ico-del" src="./assets/ico-del.png">`;
     notasId.appendChild(li);
 }
 
-notas.notas.forEach(construirHtml);
+// notas.notas.forEach(construirHtmlNota); // Muestra lista de notas en pantalla
 
 addNota.addEventListener('keyup', (e) => {
 
     if (e.key === 'Enter' && addNota.value != '') {
-        const nota = new Nota(addNota.value);
+        const nota = new Nota(addNota.value, panelCentral.getAttribute('data-id'));
         notas.nueva(nota);
-        construirHtml(nota);
+        construirHtmlNota(nota);
         addNota.value = '';
     }
 });

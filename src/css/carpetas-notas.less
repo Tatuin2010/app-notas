@@ -1,3 +1,11 @@
+#carpeta-id {
+    padding: 10px;
+    width: 95%;
+    height: 10px;
+    font-size: 24px;
+    color: #5571ca;
+
+}
 
 hr {
     border: none;
@@ -6,7 +14,7 @@ hr {
     background-color: #333;
 }
 
-#addNota {  
+#addNota, #addCarpeta {  
     padding: 8px;
     background-color: #292a2c;
     outline: none;
@@ -17,15 +25,36 @@ hr {
     font-size: 18px;
     color: #bbb;
 }
-#addNota:focus {
+#addNota:focus, #addCarpeta:focus {
     border: 1px solid #5571ca;
     border-radius: 5px;
 }
-#notas {
+#addCarpeta { 
+    width: 90%; 
+    margin: 0;
+}
+#notas, #carpetas {
     padding: 0;
     list-style-type: none;
     font-weight: 500;
     padding: 10px;
+    cursor: pointer;
+}
+
+.carpeta, .nota {
+    padding: 6px;
+    border-bottom: 1px solid #333;
+}
+.carpeta:hover, .nota:hover {
+    background-color: #2e2f31;
+    border-radius:5px;
+}
+.folder {
+    width: 18px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
 }
 
 .completado {
